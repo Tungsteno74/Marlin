@@ -355,9 +355,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define  DEFAULT_Kp 19.86
-  #define  DEFAULT_Ki 1.0
-  #define  DEFAULT_Kd 98.93
+  //#define  DEFAULT_Kp 19.86
+  //#define  DEFAULT_Ki 1.0
+  //#define  DEFAULT_Kd 98.93
 
   // MakerGear
   //#define  DEFAULT_Kp 7.0
@@ -368,6 +368,11 @@
   //#define  DEFAULT_Kp 63.0
   //#define  DEFAULT_Ki 2.25
   //#define  DEFAULT_Kd 440
+
+  // my pid values S=270 CTC PRUSA I3
+  #define  DEFAULT_Kp 9.25
+  #define  DEFAULT_Ki 0.34
+  #define  DEFAULT_Kd 63.85
 
 #endif // PIDTEMP
 
@@ -383,7 +388,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -399,9 +404,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define  DEFAULT_bedKp 10.00
-  #define  DEFAULT_bedKi .023
-  #define  DEFAULT_bedKd 305.4
+  //#define  DEFAULT_bedKp 10.00
+  //#define  DEFAULT_bedKi .023
+  //#define  DEFAULT_bedKd 305.4
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -410,6 +415,11 @@
   //#define  DEFAULT_bedKd 1675.16
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
+  
+  //my pid values with S=60 CTC PRUSA I3
+  #define  DEFAULT_bedKp 289.49
+  #define  DEFAULT_bedKi 19.63
+  #define  DEFAULT_bedKd 1067.20
 #endif // PIDTEMPBED
 
 // @section extruder
